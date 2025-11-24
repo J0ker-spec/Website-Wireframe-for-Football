@@ -1,38 +1,75 @@
-#Football Agency Sierra Leone – Wireframe
-
-This repository contains the basic wireframe design for a football agency website.
-The wireframe outlines the layout and structure for five main pages: Home, Players, Matches, Contracts, and Contact.
 
 
+Football Hub Sierra Leone
 
-Purpose
+Wireframe and Complete Website Build
 
-The goal of this wireframe is to present a clean, professional layout showing how information will be organized and displayed before development begins.
+This repository contains the wireframe and the full front end implementation for the Football Hub Sierra Leone website. The project shows how the agency’s content is structured, designed, and presented across five core pages: Home, Players, Matches, Contracts, and Contact.
 
+The README focuses on clarity so anyone opening the repo understands what the project contains, how the layout works, and how to navigate the files.
 
+Project Purpose
+
+The project aims to
+• show the planned structure of each page
+• guide the front end layout before the backend is added
+• give a clean starting point for future improvements such as filtering, player profiles, and match data integration
+
+The wireframe and website code work together. The wireframe explains the layout. The website demonstrates the final look.
 
 Pages Included
-	•	Home Page: Agency introduction, featured players, and partners
-	•	Players Page: Player grid with filters and profile placeholders
-	•	Matches Page: Upcoming and past match listings
-	•	Contracts Page: Simple contract table layout
-	•	Contact Page: Contact form and agency information
 
+Each page follows an eight column grid based on the original plan.
 
+• Home Page
+Introduction, featured players, partner section, and quick navigation blocks.
+
+• Players Page
+Player grid with image placeholders. Structured for future filtering and profile expansion.
+
+• Matches Page
+Simple layout for upcoming and completed matches. Ready for scoreboard or match stats.
+
+• Contracts Page
+Basic contract table. Supports future dynamic data or user roles.
+
+• Contact Page
+Contact form with name, email, and message fields. Agency location and details included.
 
 Tools Used
-	•	Figma / Draw.io (for wireframe creation)
-	•	PNG exports for presentation
+
+• HTML and CSS for website structure and styling
+• hand drawn wireframe creation
 
 
+Repository Structure
 
-How to View
-	1.	Open the provided .png or .fig file to view the wireframe.
-	2.	Each page is labeled and organized to guide future front-end development.
+• /wireframes
+Contains the PNG  files showing each page layout.
 
+• /website
+Contains the HTML and CSS files for the full website.
 
+• README.md
+Project overview, instructions, and documentation.
+
+How to View Everything
+
+Open the wireframes folder and review each PNG or FIG file.
+
+Open the website folder and load index.html in any browser.
+
+Navigate through all five pages to see how the designs match the wireframes.
+
+Future Improvements
+
+• Add player profile pages
+• Add live match updates
+• Add contract search
+• Add form validation
+• Add backend to store players, matches, and contracts
 
 Author
 
 Vidal Olu-Jones
-Wireframe created for educational and project documentation purposes.
+Project created for educational use and documentation at Limkokwing University.
