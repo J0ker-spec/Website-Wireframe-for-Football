@@ -1,0 +1,483 @@
+/* ---------------------------------- */
+/* GLOBAL RESET */
+/* ---------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #e6e6e6;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* ---------------------------------- */
+/* HEADER */
+/* ---------------------------------- */
+header {
+  background-color: #ff8c00;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+.logo-box {
+  background-color: black;
+  color: #ff8c00;
+  padding: 10px 16px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 4px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff9500;
+  text-decoration: underline;
+}
+
+/* ---------------------------------- */
+/* HERO SECTION */
+/* ---------------------------------- */
+/* HERO SECTION — IMAGE COVER WITH TEXT OVERLAY */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  overflow: hidden;
+}
+
+.hero img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: contain; /* ensures full image is visible */
+  z-index: 1;
+}
+
+
+.hero .hero-text {
+  position: absolute;
+  z-index: 2;
+  color: #ff8c00;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay for readability */
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.hero .hero-text h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.hero .hero-text p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #f0f0f0;
+}
+.latest-news-header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  font-family: Arial, sans-serif;
+}
+
+.latest-news-header h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.news-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.small-box {
+  background-color: #ff4c4c;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.small-box:hover {
+  background-color: #ff1a1a;
+}
+
+.view-all-btn {
+  background-color: orange;
+  color: white;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: orange;
+}
+
+.news-intro {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* ---------------------------------- */
+/* GENERAL TITLES */
+h2, h3, h4 {
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #ff8c00;
+  margin: 25px 0 10px;
+  padding-left: 15px;
+}
+
+/* ---------------------------------- */
+/* GRID CONTAINERS (Justified Layout) */
+.category-grid,
+.matches-grid,
+.players-grid,
+.about-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* ---------------------------------- */
+/* CATEGORY BOX */
+.category-box {
+  position: relative;
+  background-color: #151515;
+  border: 2px solid #ff8c00;
+  border-radius: 12px;
+  padding: 18px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-box:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 15px 30px rgba(255, 140, 0, 0.5);
+}
+
+.category-box h3 {
+  margin-bottom: 8px;
+}
+
+.category-box p {
+  color: #dcdcdc;
+  margin-bottom: 10px;
+}
+
+.category-image img {
+  width: 100%;
+  max-width: 430px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.category-image img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+/* ---------------------------------- */
+/* MATCH CARD */
+.match-card {
+  background-color: #151515;
+  border-left: 6px solid #ff9500;
+  border-radius: 12px;
+  padding: 18px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 15px 30px rgba(255, 140, 0, 0.5);
+}
+
+.match-card h4 {
+  margin-bottom: 10px;
+}
+
+.match-image img {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* ---------------------------------- */
+/* PLAYER CARD */
+.player-card {
+  background-color: #151515;
+  border: 2px solid #ff8c00;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 15px 30px rgba(255, 140, 0, 0.5);
+}
+
+.player-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.player-card img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.player-card h4 {
+  margin-bottom: 8px;
+}
+
+/* ABOUT PAGE LAYOUT */
+.about-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  line-height: 1.8;
+  color: #e6e6e6;
+}
+
+.about-section h2,
+.about-section h3 {
+  color: #ff8c00;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+/* IMAGE BOX STYLING */
+.about-image-box {
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image-box img {
+  width: 90%;
+  max-width: 650px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.about-image-box img:hover {
+  transform: scale(1.03);
+}
+
+/* RESPONSIVE TEXT */
+@media (max-width: 700px) {
+  .about-section {
+    padding: 10px 15px;
+  }
+
+  .about-image-box img {
+    width: 100%;
+  }
+}
+
+
+/* ---------------------------------- */
+/* CONTACT FORM */
+/* Container for the section */
+.contact-section {
+  max-width: 900px;      /* keeps content readable on wide screens */
+  margin: 0 auto;        /* centers content */
+  padding: 40px 20px;    /* adds breathing space */
+  font-family: Arial, sans-serif;
+  color: #fff;           /* text color for contrast */
+  line-height: 1.7;      /* improves readability */
+}
+
+/* Headings spacing */
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-section h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #ff8000;
+}
+
+/* Paragraph spacing */
+.contact-section p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Images styling */
+.contact-image {
+  width: 100%;
+  margin: 25px 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;           /* keeps aspect ratio */
+  display: block;
+  object-fit: cover;      /* crops only minimally to fill width */
+  transition: transform 0.3s ease;
+}
+
+.contact-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Optional: layout for desktop (image next to text) */
+.contact-row {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* stacks on mobile */
+}
+
+.contact-row .text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-row .contact-image {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Form spacing */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #ff8000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #e67300;
+}
+
+
+/* ---------------------------------- */
+/* FOOTER */
+footer {
+  background-color: #ff8c00;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  margin-top: 40px;
+  box-shadow: 0 -5px 10px rgba(255, 140, 0, 0.3);
+}
+
+/* ---------------------------------- */
+/* RESPONSIVE DESIGN */
+@media (max-width: 700px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-box {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .category-box,
+  .match-card,
+  .about-block,
+  .contact-form,
+  .player-card {
+    margin: 12px;
+    padding: 15px;
+  }
+}
